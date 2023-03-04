@@ -85,16 +85,18 @@ The Liskov Substitution Principle states that objects of a superclass should be 
 Here’s an example of how the Liskov Substitution Principle can be applied in Golang:
 
 
-package main
+```package main
 
 import "fmt"
 
 // This is an interface that defines a shape.
+
 type Shape interface {
     Area() float64
 }
 
 // This is a struct that implements the Shape interface.
+
 type Rectangle struct {
     width float64
     height float64
@@ -130,7 +132,7 @@ func main() {
 
     square := Square{side: 5}
     fmt.Println("Area of square:", calculateArea(square))
-}
+}```
 
 In this example, the Square struct implements the Shape interface and thus can be used wherever a Shape is expected. This allows us to substitute a Square object for a Rectangle object without affecting the correctness of the program, as both have a Area() method that implements the Shape interface. This is an example of the Liskov Substitution Principle in action.
 
