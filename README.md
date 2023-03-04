@@ -101,21 +101,25 @@ type Rectangle struct {
 }
 
 // This method calculates the area of a rectangle.
+
 func (r Rectangle) Area() float64 {
     return r.width * r.height
 }
 
 // This is a struct that implements the Shape interface.
+
 type Square struct {
     side float64
 }
 
 // This method calculates the area of a square.
+
 func (s Square) Area() float64 {
     return s.side * s.side
 }
 
 // This function takes a Shape as an argument and calculates its area.
+
 func calculateArea(s Shape) float64 {
     return s.Area()
 }
